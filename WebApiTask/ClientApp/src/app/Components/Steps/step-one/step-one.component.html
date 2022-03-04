@@ -1,0 +1,25 @@
+
+<div class="loader" *ngIf="loader.loaderStatus">
+    <mat-spinner></mat-spinner>
+  </div>
+  
+<table class='table table-striped' aria-labelledby="tableLabel" *ngIf="!loader.loaderStatus">
+    <thead>
+      <tr>
+        <th>#</th>
+        <th>ID</th>
+        <th>instructions</th>
+        <th>Details</th>
+        <th>Summary</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let step of instructions; let i = index">
+        <td>{{ i+1 }}</td>
+        <td>{{ step.id }}</td>
+        <td>{{ step.name }}</td>
+        <td>{{ step.details }}</td>
+        <td>{{ step.describtion }}</td>
+      </tr>
+    </tbody>
+  </table>

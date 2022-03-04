@@ -1,0 +1,5 @@
+
+<div class="loader" *ngIf="loader.loaderStatus">
+    <mat-spinner></mat-spinner>
+  </div>
+<div *ngIf="!loader.loaderStatus">{{message}}</div>
